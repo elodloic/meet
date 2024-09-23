@@ -1,5 +1,7 @@
 # **Meet App**
 
+### A web app leveraging the Google Calendar API to show, filter and sort upcoming events based on specific topics and location.
+  
 ## **Features, user stories, and scenarios:**
 
 ---
