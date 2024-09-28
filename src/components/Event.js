@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-const Event = ({ event }) => {
+const Event = ({ event: { summary, location, created, description } }) => {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <li>
       <div className="eventSummary">
-        <h2>{event.summary}</h2>
-        <p>{event.location}</p>
-        <p>{event.created}</p>
+        <h2>{summary}</h2>
+        <p>{location}</p>
+        <p>{created}</p>
       </div>
       {showDetails ? (
         <div className="eventDetails">
-          <p>{event.description}</p>
+          <p>{description}</p>
         </div>
       ) : null}
       <button
