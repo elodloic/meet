@@ -8,18 +8,18 @@ const Event = ({ event: { summary, location, created, description } }) => {
         <h2>{summary}</h2>
         <p>{location}</p>
         <p>{created}</p>
+        <button
+          className="detailsButton"
+          onClick={() => setShowDetails(!showDetails)}
+        >
+          {showDetails ? "Hide Details" : "Show Details"}
+        </button>
       </div>
       {showDetails ? (
         <div className="eventDetails">
           <p>{description}</p>
         </div>
       ) : null}
-      <button
-        className="detailsButton"
-        onClick={() => setShowDetails(!showDetails)}
-      >
-        {showDetails ? "Hide Details" : "Show Details"}
-      </button>
     </li>
   );
 };
