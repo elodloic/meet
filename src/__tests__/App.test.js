@@ -49,5 +49,21 @@ describe("<App /> component", () => {
         expect(event.textContent).toContain("Berlin, Germany");
       });
     });
+
+    test("Number of events displayed changes when user updates the number of events input", async () => {
+      const user = userEvent.setup();
+      const AppComponent = render(<App />);
+      const AppDOM = AppComponent.container.firstChild;
+
+      const NumberInput = AppDOM.querySelector("input[type='number']");
+
+      await user.type(NumberInput, "{backspace}{backspace}5");
+
+      const allRenderedEventItems = within(
+        AppDOM.querySelector("#event-list")
+      ).queryAllByRole("listitem");
+
+      expect(allRenderedEventItems.length).toBe(5);
+    });
   });
 });
