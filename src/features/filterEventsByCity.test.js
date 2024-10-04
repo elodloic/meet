@@ -65,10 +65,7 @@ defineFeature(feature, (test) => {
     when,
     then,
   }) => {
-    let AppComponent;
-    let AppDOM;
-    let CitySearchDOM;
-    let citySearchInput;
+    let AppComponent, AppDOM, CitySearchDOM, citySearchInput;
     given("user was typing “Berlin” in the city textbox", async () => {
       AppComponent = render(<App />);
       const user = userEvent.setup();
