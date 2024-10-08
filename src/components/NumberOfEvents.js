@@ -2,7 +2,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const handleInputChanged = (event) => {
     const value = event.target.value;
     if (isNaN(value) || value <= 0) {
-      setErrorAlert("Please enter a valid number");
+      setErrorAlert("Please enter a number greater than 0");
     } else if (value > 32) {
       setErrorAlert("A maximum of 32 is allowed");
     } else {
