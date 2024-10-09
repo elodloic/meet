@@ -35,8 +35,8 @@ class Alert extends Component {
 class InfoAlert extends Alert {
   constructor(props) {
     super(props);
-    this.color = "rgb(0, 0, 255)"; // blue
-    this.bgColor = "rgb(220, 220, 255)"; // light blue
+    this.color = "rgb(0, 0, 255)";
+    this.bgColor = "rgb(220, 220, 255)";
   }
 }
 
@@ -48,4 +48,12 @@ class ErrorAlert extends Alert {
   }
 }
 
-export { InfoAlert, ErrorAlert };
+class WarningAlert extends Alert {
+  constructor(props) {
+    super(props);
+    this.color = "rgb(255, 165, 0)";
+    this.bgColor = "rgb(255, 245, 220)";
+  }
+}
+
+export { InfoAlert, ErrorAlert, WarningAlert };
