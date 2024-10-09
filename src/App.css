@@ -94,3 +94,17 @@ input[type="number"] {
   width: 250px;
   z-index: 1000;
 }
+
+.error-container {
+  width: 250px;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.info-container {
+  width: 250px;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
