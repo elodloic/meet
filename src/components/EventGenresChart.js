@@ -22,7 +22,7 @@ const EventGenresChart = ({ events }) => {
     });
   };
 
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#A020F0"];
 
   const renderCustomizedLabel = ({
     cx,
@@ -40,7 +40,7 @@ const EventGenresChart = ({ events }) => {
       <text
         x={x}
         y={y}
-        fill="#8884d8"
+        fill="#000000"
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
       >
